@@ -1,0 +1,46 @@
+List Comprehension:
+
+
+Q1)Let's learn about list comprehensions! You are given three integers  and  representing the dimensions of a cuboid along with an integer .
+Print a list of all possible coordinates given by  on a 3D grid where the sum of  is not equal to n.
+
+solution1 :
+_____________
+
+_x=[j for j in range(y+1)]
+_y=[j for j in range(y+1)]
+_z=[k for k in range(z+1)]
+final=[]
+    for i in _x:
+        for j in _y:
+            for k in _z:
+                if (i+j+k) != n:
+                    final.append([i,j,k])
+    
+print(final)
+
+
+Solution 2:
+_____________
+_x=[i for i in range(x+1)]
+_y=[j for j in range(y+1)]
+_z=[k for k in range(z+1)]
+final=[]
+for i in _x:
+  for j in _y:
+    for k in _z:
+      if (i+j+k) != n:
+        final.append([i,j,k])
+print(final)
+
+SOlution 3:
+_______________
+import itertools
+
+def result(x,y,z,n):
+    _x=[i for i in range(x+1)]
+    _y=[j for j in range(y+1)]
+    _z=[k for k in range(x+1)]
+    res=[list(c) for c in itertools.product(_x,_y,_z) if sum(c) != n ]
+    return res
+print(result(x,y,z,n))
