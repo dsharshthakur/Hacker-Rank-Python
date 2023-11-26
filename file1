@@ -58,4 +58,27 @@ for name in student_marks.keys():
     avg_dt[name]=f"{avg_mrks:.2f}" 
    
 print(avg_dt[query_name])
+
+Q3)
+collections.namedtuple()
+Basically, namedtuples are easy to create, lightweight object types.
+They turn tuples into convenient containers for simple tasks.
+With namedtuples, you don’t have to use integer indices for accessing members of a tuple.
+
+Solution:
+from collections import namedtuple
+total_st=int(input())
+col_names=input().split()
+
+st=namedtuple("student",col_names)
+marks_col=col_names.index("MARKS")
+all_marks=[]
+
+for i in range(total_st):
+    marks=input().split()[marks_col]
+    all_marks.append(int(marks))
+avg_marks=sum(all_marks)/len(all_marks)
+print(f"{avg_marks:.2f}")
     
+    
+
