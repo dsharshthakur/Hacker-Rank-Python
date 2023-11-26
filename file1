@@ -44,3 +44,18 @@ def result(x,y,z,n):
     res=[list(c) for c in itertools.product(_x,_y,_z) if sum(c) != n ]
     return res
 print(result(x,y,z,n))
+
+Q2)
+FINDING THE PERCENTAGE :
+The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students. 
+Print the average of the marks array for the student name provided, showing 2 places after the decimal.
+
+Solution :
+
+for name in student_marks.keys():
+    mrks=student_marks.get(name)
+    avg_mrks=sum(mrks)/len(mrks)
+    avg_dt[name]=f"{avg_mrks:.2f}" 
+   
+print(avg_dt[query_name])
+    
