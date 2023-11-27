@@ -79,6 +79,43 @@ for i in range(total_st):
     all_marks.append(int(marks))
 avg_marks=sum(all_marks)/len(all_marks)
 print(f"{avg_marks:.2f}")
+
+
+Q4)
+Consider a list (list = []). You can perform the following commands:
+insert i e: Insert integer  at position .
+print: Print the list.
+remove e: Delete the first occurrence of integer .
+append e: Insert integer  at the end of the list.
+sort: Sort the list.
+pop: Pop the last element from the list.
+reverse: Reverse the list.
+
+Solution:
+for i in range(N):
+        task=input().split()
+        task=[int(item) if item.isdigit() else item for item in task]
+        if "insert" in task:
+            l.insert(task[1],task[2])
+        elif "print" in task:
+            print(l)
+        elif "remove" in task:
+            l.remove(task[1])
+        elif "append" in task:
+            l.append(task[1])
+        elif "sort" in task:
+            l.sort()
+        elif "pop" in task:
+            l.pop()
+        elif "reverse" in task:
+            l.reverse()
+        
+            
+if __name__ == '__main__':
+    N = int(input())
+    operation(N)
+    
+
     
     
 
