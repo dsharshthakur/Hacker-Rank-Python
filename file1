@@ -7,7 +7,7 @@ Print a list of all possible coordinates given by  on a 3D grid where the sum of
 solution1 :
 _____________
 
-_x=[j for j in range(y+1)]
+_x=[i for i in range(y+1)]
 _y=[j for j in range(y+1)]
 _z=[k for k in range(z+1)]
 final=[]
