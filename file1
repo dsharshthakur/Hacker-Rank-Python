@@ -194,3 +194,43 @@ if __name__ == '__main__':
     i, c = input().split()
     s_new = mutate_string(s, int(i), c)
     print(s_new)
+
+
+Q9)
+In this challenge, the user enters a string and a substring. You have to print the number of times that the substring occurs in the given string.
+String traversal will take place from left to right, not from right to left.
+
+Solution:
+def count_substring(string, sub_string):
+    start = 0
+    count = 0
+    while True:
+        match = string.find(sub_string,start)
+        if match == -1:
+            break
+        else:
+            count = count + 1
+            start = match + 1
+    
+    return count 
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
+
+Q10) String Validators 
+Python has built-in string validation methods for basic data. It can check if a string is composed of alphabetical characters, alphanumeric characters, digits, etc.
+
+Solution:
+if __name__ == '__main__':
+    s = input()
+    
+print(any([chr.isalnum() for chr in s]))
+print(any([chr.isalpha() for chr in s]))
+print(any([chr.isdigit() for chr in s]))
+print(any([chr.islower() for chr in s]))
+print(any([chr.isupper() for chr in s]))
+
