@@ -124,8 +124,46 @@ if __name__ == '__main__':
     integer_list = map(int, input().split())
     print(hash(tuple(integer_list)))
 
-    
+Q6) SWAP CASE
+You are given a string and your task is to swap cases. In other words, convert all lowercase letters to uppercase letters and vice versa.
 
-    
-    
+Solution:
 
+def swap_case(s):
+    swapped=s.swapcase()
+    return swapped
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+    
+    
+Q7)STRING SPLIT AND JOIN
+
+Solution:
+def split_and_join(line):
+    # write your code here
+    result=line.split(sep=" ")
+    return "-".join(result)
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+Q8) Whats your name ? 
+You are given the firstname and lastname of a person on two different lines. Your task is to read them and print the following:
+Hello firstname lastname! You just delved into python.
+
+Solution:
+
+def print_full_name(first, last):
+    # Write your code here
+    result = f"Hello {first} {last}! You just delved into python." 
+    print(result) 
+
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
